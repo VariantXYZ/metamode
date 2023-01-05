@@ -50,7 +50,8 @@ INTERMEDIATES := $(BUILD)/intermediate
 
 # Source Modules (directories in SRC)
 MODULES := \
-core
+core\
+gfx
 
 # Helper functions
 TOUPPER = $(shell echo '$1' | tr '[:lower:]' '[:upper:]')
