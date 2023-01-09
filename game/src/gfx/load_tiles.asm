@@ -58,4 +58,5 @@ LoadTiles:: ; aaa (0:aaa)
   or e
   jr nz, .copy_loop
   ret
-; 0xaee
+
+  padend $0aee

@@ -34,19 +34,29 @@ MAP_TYPE := map
 SOURCE_TYPE := asm
 INT_TYPE := o
 
+RAW_2BPP_SRC_TYPE := 2bpp.png
+2BPP_TYPE := 2bpp
+
 # Directories
 ## It's important these remain relative
 BASE := .
 BUILD := $(BASE)/build
 GAME := $(BASE)/game
+GFX := $(BASE)/gfx
 SCRIPT := $(BASE)/scripts
 
 # Game Source Directories
 SRC := $(GAME)/src
 COMMON := $(SRC)/common
+GFX_SRC := $(SRC)/gfx
+
+# Text/Gfx Directories
+TILESET_GFX := $(GFX)/tilesets
 
 # Build Directories
+GFX_OUT := $(BUILD)/gfx
 INTERMEDIATES := $(BUILD)/intermediate
+TILESET_OUT := $(GFX_OUT)/tilesets
 
 # Source Modules (directories in SRC)
 MODULES := \
@@ -73,12 +83,17 @@ MAP_OUT := $(BASE)/$(OUTPUT_NAME).$(MAP_TYPE)
 OBJNAMES := $(foreach MODULE,$(MODULES),$(addprefix $(MODULE)., $(addsuffix .$(INT_TYPE), $(notdir $(basename $(wildcard $(SRC)/$(MODULE)/*.$(SOURCE_TYPE)))))))
 COMMON_SRC := $(wildcard $(COMMON)/*.$(SOURCE_TYPE))
 
+TILESETS_2BPP := $(notdir $(basename $(wildcard $(TILESET_GFX)/*.$(RAW_2BPP_SRC_TYPE))))
+
 # Intermediates for common sources 
 OBJECTS := $(foreach OBJECT,$(OBJNAMES), $(addprefix $(BUILD)/,$(OBJECT)))
+
+TILESET_FILES_2BPP := $(foreach FILE,$(TILESETS_2BPP),$(TILESET_OUT)/$(basename $(FILE)).$(2BPP_TYPE))
 
 # Additional dependencies, per module granularity (i.e. core) or per file granularity (e.g. core_main_ADDITIONAL)
 #core_ADDITIONAL :=
 #core_main_ADDITIONAL := 
+gfx_tilesets_data_ADDITIONAL := $(TILESET_FILES_2BPP)
 
 .PHONY: all clean default test
 default: $(TARGET)
@@ -100,9 +115,27 @@ $(TARGET): $(OBJECTS) | $(ORIGINAL_ROM)
 $(BUILD)/%.$(INT_TYPE): $(SRC)/$$(firstword $$(subst ., ,$$*))/$$(lastword $$(subst ., ,$$*)).$(SOURCE_TYPE) $(COMMON_SRC) $$(wildcard $(SRC)/$$(firstword $$(subst ., ,$$*))/include/*.$(SOURCE_TYPE)) $$($$(firstword $$(subst ., ,$$*))_ADDITIONAL) $$($$(firstword $$(subst ., ,$$*))_$$(lastword $$(subst ., ,$$*))_ADDITIONAL) | $$(patsubst $$(pc)/,$$(pc),$$(dir $$@))
 	$(CC) $(CC_ARGS) -o $@ $<
 
+# build/tilesets/*.2bpp from source png
+$(TILESET_OUT)/%.$(2BPP_TYPE): $(TILESET_GFX)/%.$(RAW_2BPP_SRC_TYPE) | $(TILESET_OUT)
+	$(CCGFX) $(CCGFX_ARGS) -d 2 -o $@ $<
+
+### Dump Scripts
+.PHONY: dump dump_tilesets
+dump: dump_tilesets
+
+dump_tilesets: | $(TILESET_GFX)
+	rm $(call ESCAPE,$(TILESET_GFX)/*.$(RAW_2BPP_SRC_TYPE)) || echo ""
+	$(PYTHON) $(SCRIPT)/dump_tilesets.py $(ORIGINAL_ROM) "$(GFX_SRC)" "$(TILESET_GFX)" "$(TILESET_OUT)"
+
 #Make directories if necessary
 $(BUILD):
 	mkdir -p $(BUILD)
 
 $(SCRIPT_RES):
 	mkdir -p $(SCRIPT_RES)
+
+$(TILESET_GFX):
+	mkdir -p $(TILESET_GFX)
+
+$(TILESET_OUT):
+	mkdir -p $(TILESET_OUT)
