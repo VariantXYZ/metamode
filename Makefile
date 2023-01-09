@@ -49,6 +49,7 @@ SCRIPT := $(BASE)/scripts
 SRC := $(GAME)/src
 COMMON := $(SRC)/common
 GFX_SRC := $(SRC)/gfx
+SCRIPTS_SRC := $(SRC)/scripts
 
 # Text/Gfx Directories
 TILESET_GFX := $(GFX)/tilesets
@@ -61,7 +62,8 @@ TILESET_OUT := $(GFX_OUT)/tilesets
 # Source Modules (directories in SRC)
 MODULES := \
 core\
-gfx
+gfx\
+scripts
 
 # Helper functions
 TOUPPER = $(shell echo '$1' | tr '[:lower:]' '[:upper:]')
@@ -120,12 +122,15 @@ $(TILESET_OUT)/%.$(2BPP_TYPE): $(TILESET_GFX)/%.$(RAW_2BPP_SRC_TYPE) | $(TILESET
 	$(CCGFX) $(CCGFX_ARGS) -d 2 -o $@ $<
 
 ### Dump Scripts
-.PHONY: dump dump_tilesets
-dump: dump_tilesets
+.PHONY: dump dump_tilesets dump_scripts
+dump: dump_tilesets dump_scripts
 
 dump_tilesets: | $(TILESET_GFX)
 	rm $(call ESCAPE,$(TILESET_GFX)/*.$(RAW_2BPP_SRC_TYPE)) || echo ""
 	$(PYTHON) $(SCRIPT)/dump_tilesets.py $(ORIGINAL_ROM) "$(GFX_SRC)" "$(TILESET_GFX)" "$(TILESET_OUT)"
+
+dump_scripts:
+	$(PYTHON) $(SCRIPT)/dump_scripts.py $(ORIGINAL_ROM) "$(SCRIPTS_SRC)"
 
 #Make directories if necessary
 $(BUILD):

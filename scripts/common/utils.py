@@ -57,6 +57,9 @@ def txt2bin(txt, tbl, pad=0, padbyte=0):
 def read_short(rom):
     return struct.unpack("<H", rom.read(2))[0]
 
+def read_short_be(rom):
+    return struct.unpack("<H", rom.read(2))[0]
+
 def read_byte(rom):
     return struct.unpack("B", rom.read(1))[0]
 
@@ -83,3 +86,16 @@ def read_list(filename, base_offset=0):
                 tbl[current_offset] = line
                 current_offset += 1
     return tbl
+
+def generate_section_header(name, address):
+    if not isinstance(address, tuple):
+        address = real2romaddr(address)
+    
+    bank = address[0]
+    addr = address[1]
+
+    if bank == 0:
+        text = f'SECTION "{name}", ROM0[${addr:04X}]'
+    else:
+        text = f'SECTION "{name}", ROMX[${addr:04X}], BANK[${bank:02X}]'
+    return text

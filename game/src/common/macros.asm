@@ -44,3 +44,13 @@ padend: MACRO
       rst $38
     ENDR
   ENDM
+
+OffsetTableEntry: MACRO
+  dw \2 - \1
+ENDM
+
+OffsetTableBankDataEntry: MACRO
+  db \2 - BANK(\1)
+  dw \3 - \1
+  dw \4
+ENDM
