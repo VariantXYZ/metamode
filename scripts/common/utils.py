@@ -83,6 +83,7 @@ def read_list(filename, base_offset=0):
             if line.startswith('|') and len(line) > 1:
                 current_offset = base_offset + int(line.lstrip('|'), 16)
             else:
+                assert current_offset not in tbl
                 tbl[current_offset] = line
                 current_offset += 1
     return tbl

@@ -349,6 +349,13 @@ def dump_2bpp_to_png(filename, data, requested_width=None, requested_height=None
 
         width, height, palette, greyscale, bitdepth, px_map = convert_2bpp_to_png(data, **args)
 
+        # If the width wasn't requested, try to resize to 16 tiles
+        tile_width = (width // 8)
+        tile_height = (height // 8)
+        if not requested_width and tile_width % 16 != 0 and (tile_width * tile_height) % 16 == 0:
+            args['width'] = 8 * 16
+            width, height, palette, greyscale, bitdepth, px_map = convert_2bpp_to_png(data, **args)   
+
         w = png.Writer(
             width,
             height,
