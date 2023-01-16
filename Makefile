@@ -96,6 +96,7 @@ TILESET_FILES_2BPP := $(foreach FILE,$(TILESETS_2BPP),$(TILESET_OUT)/$(basename 
 #core_ADDITIONAL :=
 #core_main_ADDITIONAL := 
 gfx_tilesets_data_ADDITIONAL := $(TILESET_FILES_2BPP)
+scripts_ADDITIONAL := $(SCRIPTS_SRC)/include/commands.asm
 
 .PHONY: all clean default test
 default: $(TARGET)
