@@ -26,6 +26,9 @@ class CommandFunction:
         else:
             self.parameter_size = 0 # Let handler set this
 
+# Generate a dummy command based on the number of bytes it reads
+#def generate_dummy_command(num_param_bytes):
+
 # There are at most 0x7F commands '80' is used as a contextual control bit
 COMMANDS = {}
 COMMANDS[0x0] = CommandFunction("NoOp")
@@ -76,11 +79,14 @@ with open(rom_filename, "rb") as rom:
 
         rom_addr = (bank, addr)
         rom.seek(utils.rom2realaddr(rom_addr))
-        
-        section_header_byte = utils.read_byte(rom)
-        resource_offset = utils.read_short(rom)
-        
-        data_length = length - 3
+
+        data_length = 0
+        if length > 0:
+            assert length >= 3
+            section_header_byte = utils.read_byte(rom)
+            resource_offset = utils.read_short(rom) - 3
+            data_length = length - 3
+
         data_addr = utils.real2romaddr(rom.tell())
         data = [utils.read_byte(rom) for _ in range(0, data_length)]
 
@@ -100,6 +106,7 @@ with open(rom_filename, "rb") as rom:
         script_name = os.path.join(scripts_src_path, f"script_set_{idx:02X}.asm")
         with open(script_name, "w") as script_set_src:
             section_label = f"ScriptSet{idx:02X}"
+            section_overflow_label = f"ScriptSetOverflow{idx:02X}"
 
             section_code_label = f"ScriptSetCode{idx:02X}"
             section_code_overflow_label = f"ScriptSetCodeOverflow{idx:02X}"
@@ -113,7 +120,12 @@ with open(rom_filename, "rb") as rom:
             # Write out commands and resources (TODO: properly write them out as commands)
             script_set_src.write(utils.generate_section_header(f"Script Set {idx:02X}", rom_addr) + "\n")
             script_set_src.write(f"{section_label}::\n")
-            script_set_src.write(f"  dbw ${section_header_byte:02X}, ${resource_offset:04X} ; Section Header, Offset to resources\n\n")
+            if length > 0:
+                script_set_src.write(f"  dbw ${section_header_byte:02X}, ")
+                if len(resource_data[0]) != 0:
+                    script_set_src.write(f"{section_resource_label} - {section_label}\n\n")
+                else:
+                    script_set_src.write(f"({section_resource_overflow_label} - {section_overflow_label}) + ({section_label}End - {section_label})\n\n")
 
             # Write code section
             script_set_src.write(f"{section_code_label}::\n")
@@ -123,9 +135,26 @@ with open(rom_filename, "rb") as rom:
             script_set_src.write("\n")
             script_set_src.write(f"{section_code_label}End::\n\n")
 
+            # Write resource section
+            if len(resource_data[0]) != 0:
+                script_set_src.write(f"{section_resource_label}::\n")
+                script_set_src.write("  db ")
+                script_set_src.write(", ".join([f"${x:02X}" for x in resource_data[0]]))
+                script_set_src.write("\n")
+            else:
+                script_set_src.write(f"{section_resource_label}::\n")
+            script_set_src.write(f"{section_resource_label}End::\n\n")
+
+            script_set_src.write(f"{section_label}End::\n\n")
+
+            # Handle overflow section
+            if len(code_data[1]) == len(resource_data[1]) == 0:
+                script_set_src.write(f"{section_overflow_label}::\n\n")
+
             # Handle code overflow
             if len(code_data[1]) != 0:
                 script_set_src.write(utils.generate_section_header(f"Script Set {idx:02X} Overflow", (bank + 1, 0x4000)) + "\n")
+                script_set_src.write(f"{section_overflow_label}::\n\n")
                 script_set_src.write(f"{section_code_overflow_label}::\n")
                 if len(code_data[0]) != 0:
                     script_set_src.write("  db ")
@@ -135,20 +164,11 @@ with open(rom_filename, "rb") as rom:
                 script_set_src.write(f"{section_code_overflow_label}::\n")
             script_set_src.write(f"{section_code_overflow_label}End::\n\n")
 
-            # Write resource section
-            if len(resource_data[0]) != 0:
-                script_set_src.write(utils.generate_section_header(f"Script Set {idx:02X} Resources", (bank, addr + resource_offset + 3)) + "\n")
-                script_set_src.write(f"{section_resource_label}::\n")
-                script_set_src.write("  db ")
-                script_set_src.write(", ".join([f"${x:02X}" for x in resource_data[0]]))
-                script_set_src.write("\n")
-            else:
-                script_set_src.write(f"{section_resource_label}::\n")
-            script_set_src.write(f"{section_resource_label}End::\n\n")
-
             # Handle resource overflow
             if len(resource_data[1]) != 0:
-                script_set_src.write(utils.generate_section_header(f"Script Set {idx:02X} Resources Overflow", (bank + 1, 0x4000 + len(code_data[1]))) + "\n")
+                if len(code_data[1]) == 0:
+                    script_set_src.write(utils.generate_section_header(f"Script Set {idx:02X} Resources Overflow", (bank + 1, 0x4000 + len(code_data[1]))) + "\n")
+                    script_set_src.write(f"{section_overflow_label}::\n\n")
                 script_set_src.write(f"{section_resource_overflow_label}::\n")
                 script_set_src.write("  db ")
                 script_set_src.write(", ".join([f"${x:02X}" for x in resource_data[1]]))
@@ -157,7 +177,7 @@ with open(rom_filename, "rb") as rom:
                 script_set_src.write(f"{section_resource_overflow_label}::\n")
             script_set_src.write(f"{section_resource_overflow_label}End::\n\n")
             
-            script_set_src.write(f"{section_label}End::")
+            script_set_src.write(f"{section_overflow_label}End::\n")
 
     script_sets_src_filename = os.path.join(scripts_src_path, "script_sets.asm")
     with open(script_sets_src_filename, "w") as script_sets_src:
@@ -183,7 +203,8 @@ with open(rom_filename, "rb") as rom:
 
             name = f"ScriptSetData{idx:02X}"
             section_name = f"ScriptSet{idx:02X}"
+            section_overflow_name = f"ScriptSetOverflow{idx:02X}"
             script_sets_src.write(utils.generate_section_header(name, (TABLE_BANK_OFFSET, offset)) + "\n")
             script_sets_src.write(f"{name}::\n")
-            script_sets_src.write(f"  OffsetTableBankDataEntry ScriptSetDataTable, BANK({section_name}), {section_name}, ${length:04X}\n")
+            script_sets_src.write(f"  OffsetTableBankDataEntry ScriptSetDataTable, BANK({section_name}), {section_name}, ({section_name}End - {section_name}) + ({section_overflow_name}End - {section_overflow_name})\n")
             script_sets_src.write("\n")
