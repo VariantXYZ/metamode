@@ -16,7 +16,7 @@ VTABLE_BASE = (0x1A, 0x76ED)
 
 class CommandFunction:
     # Params must be tuples of the form (Name, '<struct format string>')
-    def __init__(self, name, special_handler = None, *params):
+    def __init__(self, name, special_handler, *params):
         self.name = name
         self.special_handler = special_handler
         self.parameters = OrderedDict(params)
@@ -27,20 +27,21 @@ class CommandFunction:
             self.parameter_size = 0 # Let handler set this
 
 # Generate a dummy command based on the number of bytes it reads
-#def generate_dummy_command(num_param_bytes):
+def generate_dummy_command(name, num_param_bytes):
+    return CommandFunction(name, None, *[(f"Unknown{x}", "B") for x in range(num_param_bytes)])
 
 # There are at most 0x7F commands '80' is used as a contextual control bit
 COMMANDS = {}
-COMMANDS[0x0] = CommandFunction("NoOp")
-COMMANDS[0x2] = CommandFunction("LoadSceneText",
-    ("Location", "B"), # Bottom (00), Top (01)
+COMMANDS[0x00] = generate_dummy_command("Unknown00", 1)
+COMMANDS[0x02] = CommandFunction("LoadSceneText", None,
+    ("ScreenLocation", "B"), # Bottom (00), Top (01)
     ("ResourceOffset", "B"), # Offset from resource start to text
 )
-COMMANDS[0x6] = CommandFunction("CharacterMove", # Used in cutscenes
+COMMANDS[0x06] = CommandFunction("CharacterMove", None, # Used in cutscenes
     ("Entity", "B"),
     ("Direction", "B"), 
     ("Distance", "B")
-) 
+)
 
 # Arguments
 script_name = sys.argv[0]
