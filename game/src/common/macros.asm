@@ -1,33 +1,33 @@
 ; macro for putting a byte then a word
-dbw: MACRO
+MACRO dbw
   db \1
   dw \2
-  ENDM
+ENDM
 
 ; macro for putting a word then a byte
-dwb: MACRO
+MACRO dwb
   dw \1
   db \2
-  ENDM
+ENDM
 
-dbww: MACRO
+MACRO dbww
   db \1
   dw \2
   dw \3
-  ENDM
+ENDM
 
-dbwb: MACRO
+MACRO dbwb
   db \1
   dw \2
   db \3
-  ENDM
+ENDM
 
-dcolor: MACRO
+MACRO dcolor
   dw ((\3) << 10) + ((\2) << 5) + (\1)
-  ENDM
+ENDM
     
 ;CGB palette color indexes are stored as big-endian words for some reason
-dpalette: MACRO
+MACRO dpalette
   dw (\1 >> 8) | ((\1 & $FF) << 8)
   dw (\2 >> 8) | ((\2 & $FF) << 8)
   dw (\3 >> 8) | ((\3 & $FF) << 8)
@@ -36,20 +36,20 @@ dpalette: MACRO
   dw (\6 >> 8) | ((\6 & $FF) << 8)
   dw (\7 >> 8) | ((\7 & $FF) << 8)
   dw (\8 >> 8) | ((\8 & $FF) << 8)
-  ENDM
+ENDM
 
-padend: MACRO
+MACRO padend
   .end\@
     REPT \1 - .end\@
       rst $38
     ENDR
-  ENDM
+ENDM
 
-OffsetTableEntry: MACRO
+MACRO OffsetTableEntry
   dw \2 - \1
 ENDM
 
-OffsetTableBankDataEntry: MACRO
+MACRO OffsetTableBankDataEntry
   db \2 - BANK(\1)
   dw \3 - \1
   dw \4
