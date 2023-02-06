@@ -7,20 +7,17 @@ ScriptSet00::
   dbw $02, (ScriptSetResourceOverflow00 - ScriptSetOverflow00) + (ScriptSet00End - ScriptSet00)
 
 ScriptSetCode00::
-  db $0B, $00, $12, $00, $19, $00, $1C, $00, $00, $00, $00, $01, $00, $8C, $00, $81, $01, $4C, $38, $10, $01, $04, $00, $82, $4C, $14, $4B, $00, $8F, $8C, $00
-ScriptSetCode00End::
-
-ScriptSetResource00::
-ScriptSetResource00End::
-
-ScriptSet00End::
-
-ScriptSetOverflow00::
-
-ScriptSetCodeOverflow00::
-ScriptSetCodeOverflow00End::
-
-ScriptSetResourceOverflow00::
-ScriptSetResourceOverflow00End::
-
-ScriptSetOverflow00End::
+  Unknown0B 00
+  Unknown12 00
+  Unknown19 00
+  Unknown1C 00
+  Unknown00 00
+  Unknown00 01
+  Unknown00 8C
+  Unknown00 81
+  Unknown01 4C
+  Unknown38 10
+  Unknown01 04
+  Unknown00 82
+  Unknown4C 14
+  Unknown4B 00
