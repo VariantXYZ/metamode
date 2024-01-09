@@ -7,7 +7,71 @@ ScriptSet14::
   dbw $03, (ScriptSetResourceOverflow14 - ScriptSetOverflow14) + (ScriptSet14End - ScriptSet14)
 
 ScriptSetCode14::
-  db $0F, $00, $11, $00, $15, $00, $1B, $00, $4F, $00, $57, $00, $00, $80, $96, $03, $10, $02, $00, $00, $00, $01, $0F, $88, $16, $02, $02, $02, $16, $02, $10, $02, $16, $02, $02, $04, $16, $02, $10, $04, $16, $02, $02, $06, $16, $02, $10, $06, $16, $02, $02, $08, $16, $02, $10, $08, $16, $02, $02, $0A, $16, $02, $10, $0A, $16, $02, $02, $0C, $16, $02, $10, $0C, $96, $02, $09, $02, $01, $03, $89, $02, $00, $01, $0F, $08, $0D, $36, $16, $02, $02, $02, $16, $02, $10, $02, $1C, $0A, $16, $02, $02, $04, $16, $02, $10, $04, $1C, $0A, $16, $02, $02, $06, $16, $02, $10, $06, $1C, $0A, $16, $02, $02, $08, $16, $02, $10, $08, $1C, $0A, $16, $02, $02, $0A, $16, $02, $10, $0A, $1C, $0A, $16, $02, $02, $0C, $16, $02, $10, $0C, $16, $02, $09, $02, $0D, $17, $1C, $1E, $91, $08
+  Unknown0F $00,$00,$11
+  Unknown00 $00,$15
+  Unknown00 $00,$1B
+  Unknown00 $00,$4F
+  Unknown00 $00,$57
+  Unknown00 $00,$00
+  Unknown00 $01,$96
+  Unknown03 $00,$10
+  LoadSceneText $00,$00,$00
+  Unknown00 $00,$01
+  Unknown0F $00,$88,$16
+  LoadSceneText $00,$02,$02
+  Unknown16 $00,$02
+  Unknown10 $00,$02
+  Unknown16 $00,$02
+  LoadSceneText $00,$04,$16
+  LoadSceneText $00,$10,$04
+  Unknown16 $00,$02
+  LoadSceneText $00,$06,$16
+  LoadSceneText $00,$10,$06
+  Unknown16 $00,$02
+  LoadSceneText $00,$08,$16
+  LoadSceneText $00,$10,$08
+  Unknown16 $00,$02
+  LoadSceneText $00,$0A,$16
+  LoadSceneText $00,$10,$0A
+  Unknown16 $00,$02
+  LoadSceneText $00,$0C,$16
+  LoadSceneText $00,$10,$0C
+  Unknown16 $01,$02
+  Unknown09 $00,$02
+  Unknown01 $00,$03
+  Unknown09 $01,$02
+  Unknown00 $00,$01
+  Unknown0F $00,$08,$0D
+  Unknown36 $00,$16
+  LoadSceneText $00,$02,$02
+  Unknown16 $00,$02
+  Unknown10 $00,$02
+  Unknown1C $00,$0A
+  Unknown16 $00,$02
+  LoadSceneText $00,$04,$16
+  LoadSceneText $00,$10,$04
+  Unknown1C $00,$0A
+  Unknown16 $00,$02
+  LoadSceneText $00,$06,$16
+  LoadSceneText $00,$10,$06
+  Unknown1C $00,$0A
+  Unknown16 $00,$02
+  LoadSceneText $00,$08,$16
+  LoadSceneText $00,$10,$08
+  Unknown1C $00,$0A
+  Unknown16 $00,$02
+  LoadSceneText $00,$0A,$16
+  LoadSceneText $00,$10,$0A
+  Unknown1C $00,$0A
+  Unknown16 $00,$02
+  LoadSceneText $00,$0C,$16
+  LoadSceneText $00,$10,$0C
+  Unknown16 $00,$02
+  Unknown09 $00,$02
+  Unknown0D $00,$17
+  Unknown1C $00,$1E
+  Unknown11 $01,$08
+
 ScriptSetCode14End::
 
 ScriptSetResource14::

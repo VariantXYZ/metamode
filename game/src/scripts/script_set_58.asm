@@ -7,7 +7,78 @@ ScriptSet58::
   dbw $09, ScriptSetResource58 - ScriptSet58
 
 ScriptSetCode58::
-  db $27, $00, $2A, $00, $31, $00, $33, $00, $3A, $00, $42, $00, $45, $00, $50, $00, $53, $00, $61, $00, $67, $00, $6F, $00, $75, $00, $7D, $00, $80, $00, $89, $00, $8C, $00, $95, $00, $00, $87, $01, $84, $0A, $02, $01, $38, $50, $81, $00, $80, $81, $01, $1A, $50, $28, $01, $01, $00, $02, $1A, $00, $01, $00, $1D, $81, $82, $00, $00, $00, $02, $1A, $00, $02, $00, $1C, $81, $01, $1D, $01, $82, $00, $01, $00, $02, $1A, $00, $03, $00, $0A, $81, $01, $1C, $01, $08, $14, $80, $02, $00, $02, $8F, $1C, $01, $00, $02, $1A, $00, $01, $00, $1C, $01, $02, $00, $03, $8F, $0A, $01, $00, $84, $06, $01, $0E, $01, $90, $01, $83, $00, $00, $00, $04, $84, $01, $00, $01, $00, $11, $81, $83, $00, $00, $00, $04, $84, $01, $00, $01, $00, $11, $01, $23, $4C, $00, $8F, $11, $01
+  Unknown27 $00,$00
+  Unknown2A $00,$00
+  Unknown31 $00,$00
+  Unknown33 $00,$00
+  Unknown3A $00,$00
+  Unknown42 $00,$00
+  Unknown45 $00,$00
+  Unknown50 $00,$00
+  Unknown53 $00,$00
+  Unknown61 $00,$00
+  Unknown67 $00,$00
+  Unknown6F $00,$00
+  Unknown75 $00,$00
+  Unknown7D $00,$00
+  Unknown00 $01,$00
+  Unknown09 $01,$00
+  Unknown0C $01,$00
+  Unknown15 $01,$00
+  Unknown00 $00,$87
+  Unknown01 $00,$84
+  Unknown0A $00,$02
+  Unknown01 $00,$38
+  Unknown50 $00,$81
+  Unknown00 $00,$80
+  Unknown01 $01,$01
+  Unknown1A $00,$50
+  Unknown28 $00,$01
+  Unknown01 $00,$00
+  LoadSceneText $00,$1A,$00
+  Unknown01 $00,$00
+  Unknown1D $00,$81
+  LoadSceneText $01,$00,$00
+  Unknown00 $00,$02
+  Unknown1A $00,$00
+  LoadSceneText $00,$00,$1C
+  Unknown01 $01,$01
+  Unknown1D $00,$01
+  LoadSceneText $01,$00,$01
+  Unknown00 $00,$02
+  Unknown1A $00,$00
+  Unknown03 $00,$00
+  Unknown0A $00,$81
+  Unknown01 $00,$1C
+  Unknown01 $00,$08
+  Unknown14 $00,$80
+  LoadSceneText $00,$00,$02
+  Unknown0F $01,$1C,$01
+  Unknown00 $00,$02
+  Unknown1A $00,$00
+  Unknown01 $00,$00
+  Unknown1C $00,$01
+  LoadSceneText $00,$00,$03
+  Unknown0F $01,$0A,$01
+  Unknown00 $00,$84
+  CharacterMove $00,$01,$0E,$01
+  Unknown10 $01,$01
+  Unknown03 $01,$00
+  Unknown00 $00,$00
+  Unknown04 $00,$84
+  Unknown01 $00,$00
+  Unknown01 $00,$00
+  Unknown11 $00,$81
+  Unknown03 $01,$00
+  Unknown00 $00,$00
+  Unknown04 $00,$84
+  Unknown01 $00,$00
+  Unknown01 $00,$00
+  Unknown11 $00,$01
+  Unknown23 $00,$4C
+  Unknown00 $00,$8F
+  Unknown11 $00,$01
+
 ScriptSetCode58End::
 
 ScriptSetResource58::

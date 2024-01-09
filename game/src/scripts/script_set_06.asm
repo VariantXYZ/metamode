@@ -7,7 +7,15 @@ ScriptSet06::
   dbw $01, (ScriptSetResourceOverflow06 - ScriptSetOverflow06) + (ScriptSet06End - ScriptSet06)
 
 ScriptSetCode06::
-  db $07, $00, $09, $00, $00, $80, $80, $02, $25, $20, $38, $01, $26, $38, $20, $00
+  Unknown07 $00,$00
+  Unknown09 $00,$00
+  Unknown00 $00,$80
+  Unknown00 $01,$02
+  Unknown25 $00,$20
+  Unknown38 $00,$01
+  Unknown26 $00,$38
+  Unknown20 $00,$00
+
 ScriptSetCode06End::
 
 ScriptSetResource06::

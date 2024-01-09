@@ -7,7 +7,68 @@ ScriptSet66::
   dbw $07, ScriptSetResource66 - ScriptSet66
 
 ScriptSetCode66::
-  db $1F, $00, $21, $00, $2D, $00, $30, $00, $40, $00, $48, $00, $4B, $00, $59, $00, $62, $00, $6A, $00, $70, $00, $73, $00, $7A, $00, $80, $00, $00, $80, $81, $02, $38, $58, $38, $02, $00, $5B, $80, $40, $00, $02, $00, $82, $38, $02, $00, $00, $93, $3D, $00, $40, $00, $02, $00, $01, $8C, $03, $82, $00, $02, $00, $02, $5B, $00, $01, $00, $02, $81, $82, $00, $05, $00, $02, $5B, $00, $03, $00, $01, $81, $01, $02, $01, $18, $5A, $01, $02, $00, $04, $15, $E5, $80, $8F, $02, $01, $00, $02, $5B, $00, $01, $00, $02, $01, $02, $00, $03, $8F, $01, $01, $00, $87, $01, $84, $0C, $01, $03, $70, $28, $81, $00, $84, $0E, $01, $90, $01, $83, $00, $00
+  Unknown1F $00,$00
+  Unknown21 $00,$00
+  Unknown2D $00,$00
+  Unknown30 $00,$00
+  Unknown40 $00,$00
+  Unknown48 $00,$00
+  Unknown4B $00,$00
+  Unknown59 $00,$00
+  Unknown62 $00,$00
+  Unknown6A $00,$00
+  Unknown70 $00,$00
+  Unknown73 $00,$00
+  Unknown7A $00,$00
+  Unknown00 $01,$00
+  Unknown00 $00,$80
+  Unknown01 $01,$02
+  Unknown38 $00,$58
+  Unknown38 $00,$02
+  Unknown00 $00,$5B
+  Unknown00 $01,$40
+  Unknown00 $00,$02
+  Unknown00 $00,$82
+  Unknown38 $00,$02
+  Unknown00 $00,$00
+  Unknown13 $01,$3D
+  Unknown00 $00,$40
+  Unknown00 $00,$02
+  Unknown00 $00,$01
+  Unknown0C $01,$03
+  LoadSceneText $01,$00,$02
+  Unknown00 $00,$02
+  Unknown5B $00,$00
+  Unknown01 $00,$00
+  LoadSceneText $00,$81,$82
+  Unknown00 $00,$05
+  Unknown00 $00,$02
+  Unknown5B $00,$00
+  Unknown03 $00,$00
+  Unknown01 $00,$81
+  Unknown01 $00,$02
+  Unknown01 $00,$18
+  Unknown5A $00,$01
+  LoadSceneText $00,$00,$04
+  Unknown15 $00,$E5
+  Unknown00 $01,$8F
+  LoadSceneText $00,$01,$00
+  LoadSceneText $00,$5B,$00
+  Unknown01 $00,$00
+  LoadSceneText $00,$01,$02
+  Unknown00 $00,$03
+  Unknown0F $01,$01,$01
+  Unknown00 $00,$87
+  Unknown01 $00,$84
+  Unknown0C $00,$01
+  Unknown03 $00,$70
+  Unknown28 $00,$81
+  Unknown00 $00,$84
+  Unknown0E $00,$01
+  Unknown10 $01,$01
+  Unknown03 $01,$00
+  Unknown00 $00
+
 ScriptSetCode66End::
 
 ScriptSetResource66::

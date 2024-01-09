@@ -7,7 +7,17 @@ ScriptSet04::
   dbw $02, ScriptSetResource04 - ScriptSet04
 
 ScriptSetCode04::
-  db $0B, $00, $0E, $00, $15, $00, $19, $00, $00, $87, $02, $84, $03, $05, $05, $90, $60, $82, $00, $84, $86, $05, $82, $00, $00
+  Unknown0B $00,$00,$0E,$00
+  Unknown15 $00,$00
+  Unknown19 $00,$00
+  Unknown00 $00,$87
+  LoadSceneText $00,$84,$03
+  Unknown05 $00,$05
+  Unknown10 $01,$60
+  LoadSceneText $01,$00,$84
+  CharacterMove $01,$05,$82,$00
+  Unknown00 $00
+
 ScriptSetCode04End::
 
 ScriptSetResource04::

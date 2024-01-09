@@ -7,7 +7,33 @@ ScriptSet63::
   dbw $04, ScriptSetResource63 - ScriptSet63
 
 ScriptSetCode63::
-  db $13, $00, $16, $00, $1D, $00, $1F, $00, $2B, $00, $2E, $00, $31, $00, $34, $00, $00, $87, $01, $84, $07, $00, $05, $80, $28, $81, $00, $80, $81, $02, $33, $30, $40, $01, $00, $29, $50, $18, $01, $02, $00, $82, $33, $82, $00, $00, $00, $82, $29, $82, $00, $01
+  Unknown13 $00,$00
+  Unknown16 $00,$00
+  Unknown1D $00,$00
+  Unknown1F $00,$00
+  Unknown2B $00,$00
+  Unknown2E $00,$00
+  Unknown31 $00,$00
+  Unknown34 $00,$00
+  Unknown00 $00,$87
+  Unknown01 $00,$84
+  Unknown07 $00,$00
+  Unknown05 $00,$80
+  Unknown28 $00,$81
+  Unknown00 $00,$80
+  Unknown01 $01,$02
+  Unknown33 $00,$30
+  Unknown40 $00,$01
+  Unknown00 $00,$29
+  Unknown50 $00,$18
+  Unknown01 $00,$02
+  Unknown00 $00,$82
+  Unknown33 $00,$82
+  Unknown00 $00,$00
+  Unknown00 $00,$82
+  Unknown29 $00,$82
+  Unknown00 $00,$01
+
 ScriptSetCode63End::
 
 ScriptSetResource63::

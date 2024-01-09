@@ -7,7 +7,33 @@ ScriptSet07::
   dbw $04, ScriptSetResource07 - ScriptSet07
 
 ScriptSetCode07::
-  db $13, $00, $16, $00, $1D, $00, $21, $00, $24, $00, $2B, $00, $32, $00, $35, $00, $00, $87, $00, $84, $06, $03, $05, $40, $70, $80, $00, $84, $90, $01, $82, $00, $00, $00, $00, $00, $01, $00, $B6, $00, $81, $01, $4C, $08, $18, $01, $04, $00, $82, $4C, $14, $1C, $00, $8F, $B6, $00
+  Unknown13 $00,$00
+  Unknown16 $00,$00
+  Unknown1D $00,$00
+  Unknown21 $00,$00
+  Unknown24 $00,$00
+  Unknown2B $00,$00
+  Unknown32 $00,$00
+  Unknown35 $00,$00
+  Unknown00 $00,$87
+  Unknown00 $00,$84
+  CharacterMove $00,$03,$05,$40
+  Unknown70 $00,$80
+  Unknown00 $00,$84
+  Unknown10 $01,$01
+  LoadSceneText $01,$00,$00
+  Unknown00 $00,$00
+  Unknown00 $00,$01
+  Unknown00 $00,$B6
+  Unknown00 $00,$81
+  Unknown01 $00,$4C
+  Unknown08 $00,$18
+  Unknown01 $00,$04
+  Unknown00 $00,$82
+  Unknown4C $00,$14
+  Unknown1C $00,$00
+  Unknown0F $01,$B6,$00
+
 ScriptSetCode07End::
 
 ScriptSetResource07::

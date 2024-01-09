@@ -7,7 +7,88 @@ ScriptSet41::
   dbw $0A, ScriptSetResource41 - ScriptSet41
 
 ScriptSetCode41::
-  db $2B, $00, $2E, $00, $35, $00, $38, $00, $3F, $00, $41, $00, $4D, $00, $55, $00, $5B, $00, $66, $00, $6F, $00, $77, $00, $7A, $00, $7D, $00, $8D, $00, $96, $00, $99, $00, $A2, $00, $A8, $00, $AC, $00, $00, $87, $01, $84, $09, $02, $08, $38, $58, $81, $00, $87, $00, $84, $43, $00, $00, $48, $70, $80, $00, $80, $81, $02, $56, $60, $30, $01, $00, $5B, $10, $18, $03, $02, $00, $02, $56, $00, $01, $00, $D4, $00, $02, $00, $00, $82, $00, $01, $00, $02, $56, $00, $02, $00, $D4, $80, $01, $CC, $00, $02, $00, $00, $02, $00, $02, $8F, $CB, $00, $00, $02, $56, $00, $01, $00, $CC, $80, $82, $00, $03, $00, $82, $5B, $02, $00, $04, $93, $8A, $00, $8D, $00, $02, $00, $05, $8C, $03, $82, $00, $06, $00, $04, $84, $01, $00, $01, $00, $65, $80, $83, $00, $00, $00, $04, $84, $01, $00, $01, $00, $65, $00, $23, $3C, $00, $8F, $65, $00, $00, $84, $82, $01, $83, $00, $00
+  Unknown2B $00,$00
+  Unknown2E $00,$00
+  Unknown35 $00,$00
+  Unknown38 $00,$00
+  Unknown3F $00,$00
+  Unknown41 $00,$00
+  Unknown4D $00,$00
+  Unknown55 $00,$00
+  Unknown5B $00,$00
+  Unknown66 $00,$00
+  Unknown6F $00,$00
+  Unknown77 $00,$00
+  Unknown7A $00,$00
+  Unknown7D $00,$00
+  Unknown0D $01,$00
+  Unknown16 $01,$00
+  Unknown19 $01,$00
+  Unknown22 $01,$00
+  Unknown28 $01,$00
+  Unknown2C $01,$00
+  Unknown00 $00,$87
+  Unknown01 $00,$84
+  Unknown09 $00,$02
+  Unknown08 $00,$38
+  Unknown58 $00,$81
+  Unknown00 $00,$87
+  Unknown00 $00,$84
+  Unknown43 $00,$00
+  Unknown00 $00,$48
+  Unknown70 $00,$80
+  Unknown00 $00,$80
+  Unknown01 $01,$02
+  Unknown56 $00,$60
+  Unknown30 $00,$01
+  Unknown00 $00,$5B
+  Unknown10 $00,$18
+  Unknown03 $00,$02
+  Unknown00 $00,$02
+  Unknown56 $00,$00
+  Unknown01 $00,$00
+  Unknown54 $01,$00
+  LoadSceneText $00,$00,$00
+  LoadSceneText $01,$00,$01
+  Unknown00 $00,$02
+  Unknown56 $00,$00
+  LoadSceneText $00,$00,$D4
+  Unknown00 $01,$01
+  Unknown4C $01,$00
+  LoadSceneText $00,$00,$00
+  LoadSceneText $00,$00,$02
+  Unknown0F $01,$CB,$00
+  Unknown00 $00,$02
+  Unknown56 $00,$00
+  Unknown01 $00,$00
+  Unknown4C $01,$80
+  LoadSceneText $01,$00,$03
+  Unknown00 $00,$82
+  Unknown5B $00,$02
+  Unknown00 $00,$04
+  Unknown13 $01,$8A
+  Unknown00 $00,$8D
+  Unknown00 $00,$02
+  Unknown00 $00,$05
+  Unknown0C $01,$03
+  LoadSceneText $01,$00,$06
+  Unknown00 $00,$04
+  Unknown04 $01,$01
+  Unknown00 $00,$01
+  Unknown00 $00,$65
+  Unknown00 $01,$83
+  Unknown00 $00,$00
+  Unknown00 $00,$04
+  Unknown04 $01,$01
+  Unknown00 $00,$01
+  Unknown00 $00,$65
+  Unknown00 $00,$23
+  Unknown3C $00,$00
+  Unknown0F $01,$65,$00
+  Unknown00 $00,$84
+  LoadSceneText $01,$01,$83
+  Unknown00 $00,$00
+
 ScriptSetCode41End::
 
 ScriptSetResource41::

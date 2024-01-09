@@ -7,7 +7,24 @@ ScriptSet30::
   dbw $03, (ScriptSetResourceOverflow30 - ScriptSetOverflow30) + (ScriptSet30End - ScriptSet30)
 
 ScriptSetCode30::
-  db $0F, $00, $12, $00, $19, $00, $1B, $00, $22, $00, $25, $00, $00, $87, $01, $84, $0B, $02, $00, $48, $38, $81, $00, $80, $81, $01, $63, $48, $10, $01, $00, $00, $82, $63, $8C, $01
+  Unknown0F $00,$00,$12
+  Unknown00 $00,$19
+  Unknown00 $00,$1B
+  Unknown00 $00,$22
+  Unknown00 $00,$25
+  Unknown00 $00,$00
+  Unknown07 $01,$01
+  Unknown04 $01,$0B
+  LoadSceneText $00,$00,$48
+  Unknown38 $00,$81
+  Unknown00 $00,$80
+  Unknown01 $01,$01
+  Unknown63 $00,$48
+  Unknown10 $00,$01
+  Unknown00 $00,$00
+  LoadSceneText $01,$63,$8C
+  Unknown01 $00
+
 ScriptSetCode30End::
 
 ScriptSetResource30::

@@ -7,7 +7,14 @@ ScriptSet0C::
   dbw $01, (ScriptSetResourceOverflow0C - ScriptSetOverflow0C) + (ScriptSet0CEnd - ScriptSet0C)
 
 ScriptSetCode0C::
-  db $07, $00, $0B, $00, $00, $83, $8A, $04, $84, $67, $00, $00, $48, $70, $80
+  Unknown07 $00,$00
+  Unknown0B $00,$00,$00,$83
+  Unknown0A $01,$04
+  Unknown04 $01,$67
+  Unknown00 $00,$00
+  Unknown48 $00,$70
+  Unknown00 $01
+
 ScriptSetCode0CEnd::
 
 ScriptSetResource0C::

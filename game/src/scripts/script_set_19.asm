@@ -7,7 +7,32 @@ ScriptSet19::
   dbw $04, ScriptSetResource19 - ScriptSet19
 
 ScriptSetCode19::
-  db $13, $00, $16, $00, $1D, $00, $1F, $00, $2B, $00, $2E, $00, $31, $00, $34, $00, $00, $87, $01, $84, $01, $02, $02, $60, $38, $81, $00, $80, $81, $02, $2E, $60, $18, $01, $00, $33, $70, $18, $01, $00, $00, $82, $2E, $82, $00, $00, $00, $82, $33, $82, $00, $01
+  Unknown13 $00,$00
+  Unknown16 $00,$00
+  Unknown1D $00,$00
+  Unknown1F $00,$00
+  Unknown2B $00,$00
+  Unknown2E $00,$00
+  Unknown31 $00,$00
+  Unknown34 $00,$00
+  Unknown00 $00,$87
+  Unknown01 $00,$84
+  Unknown01 $00,$02
+  LoadSceneText $00,$60,$38
+  Unknown01 $01,$00
+  Unknown00 $01,$81
+  LoadSceneText $00,$2E,$60
+  Unknown18 $00,$01
+  Unknown00 $00,$33
+  Unknown70 $00,$18
+  Unknown01 $00,$00
+  Unknown00 $00,$82
+  Unknown2E $00,$82
+  Unknown00 $00,$00
+  Unknown00 $00,$82
+  Unknown33 $00,$82
+  Unknown00 $00,$01
+
 ScriptSetCode19End::
 
 ScriptSetResource19::

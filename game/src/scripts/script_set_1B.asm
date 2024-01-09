@@ -7,7 +7,67 @@ ScriptSet1B::
   dbw $05, ScriptSetResource1B - ScriptSet1B
 
 ScriptSetCode1B::
-  db $17, $00, $1A, $00, $21, $00, $2B, $00, $32, $00, $3C, $00, $43, $00, $4D, $00, $8A, $00, $90, $00, $00, $87, $01, $84, $01, $03, $02, $48, $58, $81, $00, $00, $00, $02, $00, $01, $80, $01, $02, $00, $81, $01, $56, $48, $28, $00, $00, $00, $00, $00, $02, $00, $01, $80, $01, $02, $00, $09, $00, $88, $1A, $48, $70, $00, $00, $01, $00, $02, $00, $01, $80, $01, $02, $00, $0D, $0D, $02, $01, $00, $06, $56, $05, $00, $02, $03, $01, $06, $1A, $04, $28, $02, $01, $02, $02, $03, $03, $06, $1A, $05, $00, $1C, $1E, $06, $1A, $04, $00, $02, $01, $04, $06, $56, $04, $00, $1C, $3C, $06, $56, $05, $00, $02, $03, $05, $02, $01, $06, $0F, $02, $00, $84, $1B, $01, $00, $00, $38, $83, $00, $84, $02, $01, $84, $01, $83, $00, $00
+  Unknown17 $00,$00
+  Unknown1A $00,$00
+  Unknown21 $00,$00
+  Unknown2B $00,$00
+  Unknown32 $00,$00
+  Unknown3C $00,$00
+  Unknown43 $00,$00
+  Unknown4D $00,$00
+  Unknown0A $01,$00
+  Unknown10 $01,$00
+  Unknown00 $00,$87
+  Unknown01 $00,$84
+  Unknown01 $00,$03
+  LoadSceneText $00,$48,$58
+  Unknown01 $01,$00
+  Unknown00 $00,$00
+  LoadSceneText $00,$00,$01
+  Unknown00 $01,$01
+  LoadSceneText $00,$00,$81
+  Unknown01 $00,$56
+  Unknown48 $00,$28
+  Unknown00 $00,$00
+  Unknown00 $00,$00
+  Unknown00 $00,$02
+  Unknown00 $00,$01
+  Unknown00 $01,$01
+  LoadSceneText $00,$00,$09
+  Unknown00 $00,$88
+  Unknown1A $00,$48
+  Unknown70 $00,$00
+  Unknown00 $00,$01
+  Unknown00 $00,$02
+  Unknown00 $00,$01
+  Unknown00 $01,$01
+  LoadSceneText $00,$00,$0D
+  Unknown0D $00,$02
+  Unknown01 $00,$00
+  CharacterMove $00,$56,$05,$00
+  LoadSceneText $00,$03,$01
+  CharacterMove $00,$1A,$04,$28
+  LoadSceneText $00,$01,$02
+  LoadSceneText $00,$03,$03
+  CharacterMove $00,$1A,$05,$00
+  Unknown1C $00,$1E
+  CharacterMove $00,$1A,$04,$00
+  LoadSceneText $00,$01,$04
+  CharacterMove $00,$56,$04,$00
+  Unknown1C $00,$3C
+  CharacterMove $00,$56,$05,$00
+  LoadSceneText $00,$03,$05
+  LoadSceneText $00,$01,$06
+  Unknown0F $00,$02,$00
+  Unknown04 $01,$1B
+  Unknown01 $00,$00
+  Unknown00 $00,$38
+  Unknown03 $01,$00
+  Unknown04 $01,$02
+  Unknown01 $00,$84
+  Unknown01 $00,$83
+  Unknown00 $00,$00
+
 ScriptSetCode1BEnd::
 
 ScriptSetResource1B::

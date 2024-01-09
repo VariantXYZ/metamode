@@ -7,7 +7,15 @@ ScriptSet12::
   dbw $01, (ScriptSetResourceOverflow12 - ScriptSetOverflow12) + (ScriptSet12End - ScriptSet12)
 
 ScriptSetCode12::
-  db $07, $00, $09, $00, $00, $80, $80, $02, $28, $10, $40, $01, $28, $40, $20, $01
+  Unknown07 $00,$00
+  Unknown09 $00,$00
+  Unknown00 $00,$80
+  Unknown00 $01,$02
+  Unknown28 $00,$10
+  Unknown40 $00,$01
+  Unknown28 $00,$40
+  Unknown20 $00,$01
+
 ScriptSetCode12End::
 
 ScriptSetResource12::

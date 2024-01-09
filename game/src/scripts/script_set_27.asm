@@ -7,7 +7,74 @@ ScriptSet27::
   dbw $09, ScriptSetResource27 - ScriptSet27
 
 ScriptSetCode27::
-  db $27, $00, $2A, $00, $31, $00, $33, $00, $3F, $00, $47, $00, $4A, $00, $52, $00, $55, $00, $5D, $00, $60, $00, $68, $00, $6B, $00, $6F, $00, $72, $00, $7B, $00, $7E, $00, $87, $00, $00, $87, $01, $84, $00, $03, $01, $70, $40, $81, $00, $80, $81, $02, $1F, $60, $20, $01, $00, $1A, $30, $10, $01, $01, $00, $02, $1A, $00, $01, $00, $19, $00, $82, $00, $00, $00, $02, $1A, $00, $01, $00, $19, $80, $82, $00, $02, $00, $02, $1F, $00, $01, $00, $19, $00, $82, $00, $01, $00, $02, $1F, $00, $01, $00, $19, $80, $82, $00, $03, $00, $84, $8E, $01, $83, $00, $00, $00, $04, $90, $01, $00, $01, $00, $5B, $80, $83, $00, $00, $00, $04, $90, $01, $00, $01, $00, $5B, $00, $23, $35, $00, $8F, $5B, $00
+  Unknown27 $00,$00
+  Unknown2A $00,$00
+  Unknown31 $00,$00
+  Unknown33 $00,$00
+  Unknown3F $00,$00
+  Unknown47 $00,$00
+  Unknown4A $00,$00
+  Unknown52 $00,$00
+  Unknown55 $00,$00
+  Unknown5D $00,$00
+  Unknown60 $00,$00
+  Unknown68 $00,$00
+  Unknown6B $00,$00
+  Unknown6F $00,$00
+  Unknown72 $00,$00
+  Unknown7B $00,$00
+  Unknown7E $00,$00
+  Unknown07 $01,$00
+  Unknown00 $00,$87
+  Unknown01 $00,$84
+  Unknown00 $00,$03
+  Unknown01 $00,$70
+  Unknown40 $00,$81
+  Unknown00 $00,$80
+  Unknown01 $01,$02
+  Unknown1F $00,$60
+  Unknown20 $00,$01
+  Unknown00 $00,$1A
+  Unknown30 $00,$10
+  Unknown01 $00,$01
+  Unknown00 $00,$02
+  Unknown1A $00,$00
+  Unknown01 $00,$00
+  Unknown19 $00,$00
+  LoadSceneText $01,$00,$00
+  Unknown00 $00,$02
+  Unknown1A $00,$00
+  Unknown01 $00,$00
+  Unknown19 $00,$80
+  LoadSceneText $01,$00,$02
+  Unknown00 $00,$02
+  Unknown1F $00,$00
+  Unknown01 $00,$00
+  Unknown19 $00,$00
+  LoadSceneText $01,$00,$01
+  Unknown00 $00,$02
+  Unknown1F $00,$00
+  Unknown01 $00,$00
+  Unknown19 $00,$80
+  LoadSceneText $01,$00,$03
+  Unknown00 $00,$84
+  Unknown0E $01,$01
+  Unknown03 $01,$00
+  Unknown00 $00,$00
+  Unknown04 $00,$90
+  Unknown01 $00,$00
+  Unknown01 $00,$00
+  Unknown5B $00,$80
+  Unknown03 $01,$00
+  Unknown00 $00,$00
+  Unknown04 $00,$90
+  Unknown01 $00,$00
+  Unknown01 $00,$00
+  Unknown5B $00,$00
+  Unknown23 $00,$35
+  Unknown00 $00,$8F
+  Unknown5B $00,$00
+
 ScriptSetCode27End::
 
 ScriptSetResource27::

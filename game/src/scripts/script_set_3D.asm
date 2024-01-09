@@ -7,7 +7,71 @@ ScriptSet3D::
   dbw $08, ScriptSetResource3D - ScriptSet3D
 
 ScriptSetCode3D::
-  db $23, $00, $26, $00, $2D, $00, $30, $00, $37, $00, $39, $00, $45, $00, $50, $00, $56, $00, $5E, $00, $61, $00, $6F, $00, $7E, $00, $81, $00, $84, $00, $8A, $00, $00, $87, $01, $84, $09, $00, $02, $30, $20, $81, $00, $87, $00, $84, $3E, $00, $00, $48, $70, $80, $00, $80, $81, $02, $56, $38, $38, $02, $00, $5B, $60, $30, $01, $02, $00, $02, $56, $01, $02, $00, $D1, $00, $01, $D2, $00, $02, $00, $00, $82, $00, $01, $00, $02, $56, $00, $01, $00, $D3, $80, $82, $00, $02, $00, $02, $56, $00, $03, $00, $D1, $80, $01, $D2, $80, $02, $D3, $00, $02, $00, $00, $02, $00, $03, $15, $07, $80, $0F, $D3, $00, $82, $00, $02, $00, $82, $5B, $82, $00, $04, $00, $84, $02, $01, $84, $01, $83, $00, $00
+  Unknown23 $00,$00
+  Unknown26 $00,$00
+  Unknown2D $00,$00
+  Unknown30 $00,$00
+  Unknown37 $00,$00
+  Unknown39 $00,$00
+  Unknown45 $00,$00
+  Unknown50 $00,$00
+  Unknown56 $00,$00
+  Unknown5E $00,$00
+  Unknown61 $00,$00
+  Unknown6F $00,$00
+  Unknown7E $00,$00
+  Unknown01 $01,$00
+  Unknown04 $01,$00
+  Unknown0A $01,$00
+  Unknown00 $00,$87
+  Unknown01 $00,$84
+  Unknown09 $00,$00
+  LoadSceneText $00,$30,$20
+  Unknown01 $01,$00
+  Unknown07 $01,$00
+  Unknown04 $01,$3E
+  Unknown00 $00,$00
+  Unknown48 $00,$70
+  Unknown00 $01,$00
+  Unknown00 $01,$81
+  LoadSceneText $00,$56,$38
+  Unknown38 $00,$02
+  Unknown00 $00,$5B
+  Unknown60 $00,$30
+  Unknown01 $00,$02
+  Unknown00 $00,$02
+  Unknown56 $00,$01
+  LoadSceneText $00,$00,$D1
+  Unknown00 $00,$01
+  Unknown52 $01,$00
+  LoadSceneText $00,$00,$00
+  LoadSceneText $01,$00,$01
+  Unknown00 $00,$02
+  Unknown56 $00,$00
+  Unknown01 $00,$00
+  Unknown53 $01,$80
+  LoadSceneText $01,$00,$02
+  Unknown00 $00,$02
+  Unknown56 $00,$00
+  Unknown03 $00,$00
+  Unknown51 $01,$80
+  Unknown01 $00,$D2
+  Unknown00 $01,$02
+  Unknown53 $01,$00
+  LoadSceneText $00,$00,$00
+  LoadSceneText $00,$00,$03
+  Unknown15 $00,$07
+  Unknown00 $01,$0F
+  Unknown53 $01,$00
+  LoadSceneText $01,$00,$02
+  Unknown00 $00,$82
+  Unknown5B $00,$82
+  Unknown00 $00,$04
+  Unknown00 $00,$84
+  LoadSceneText $00,$01,$84
+  Unknown01 $00,$83
+  Unknown00 $00,$00
+
 ScriptSetCode3DEnd::
 
 ScriptSetResource3D::

@@ -7,7 +7,20 @@ ScriptSet10::
   dbw $02, (ScriptSetResourceOverflow10 - ScriptSetOverflow10) + (ScriptSet10End - ScriptSet10)
 
 ScriptSetCode10::
-  db $0B, $00, $0F, $00, $16, $00, $1E, $00, $00, $83, $84, $07, $84, $10, $04, $03, $70, $50, $82, $00, $07, $03, $00, $01, $00, $65, $01, $8F, $65, $01
+  Unknown0B $00,$00,$0F,$00
+  Unknown16 $00,$00
+  Unknown1E $00,$00
+  Unknown00 $00,$83
+  Unknown04 $01,$07
+  Unknown04 $01,$10
+  Unknown04 $00,$03
+  Unknown70 $00,$50
+  LoadSceneText $01,$00,$07
+  Unknown03 $00,$00
+  Unknown01 $00,$00
+  Unknown65 $00,$01
+  Unknown0F $01,$65,$01
+
 ScriptSetCode10End::
 
 ScriptSetResource10::

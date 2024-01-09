@@ -7,7 +7,32 @@ ScriptSet1E::
   dbw $04, ScriptSetResource1E - ScriptSet1E
 
 ScriptSetCode1E::
-  db $13, $00, $16, $00, $1D, $00, $1F, $00, $2B, $00, $2E, $00, $30, $00, $33, $00, $00, $87, $01, $84, $01, $05, $04, $58, $40, $81, $00, $80, $81, $02, $66, $48, $10, $01, $00, $33, $80, $40, $01, $01, $00, $82, $66, $8C, $00, $00, $82, $33, $82, $00, $00
+  Unknown13 $00,$00
+  Unknown16 $00,$00
+  Unknown1D $00,$00
+  Unknown1F $00,$00
+  Unknown2B $00,$00
+  Unknown2E $00,$00
+  Unknown30 $00,$00
+  Unknown33 $00,$00
+  Unknown00 $00,$87
+  Unknown01 $00,$84
+  Unknown01 $00,$05
+  Unknown04 $00,$58
+  Unknown40 $00,$81
+  Unknown00 $00,$80
+  Unknown01 $01,$02
+  Unknown66 $00,$48
+  Unknown10 $00,$01
+  Unknown00 $00,$33
+  Unknown00 $01,$40
+  Unknown01 $00,$01
+  Unknown00 $00,$82
+  Unknown66 $00,$8C
+  Unknown00 $00,$00
+  LoadSceneText $01,$33,$82
+  Unknown00 $00,$00
+
 ScriptSetCode1EEnd::
 
 ScriptSetResource1E::

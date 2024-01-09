@@ -7,7 +7,15 @@ ScriptSet0D::
   dbw $0C, (ScriptSetResourceOverflow0D - ScriptSetOverflow0D) + (ScriptSet0DEnd - ScriptSet0D)
 
 ScriptSetCode0D::
-  db $33, $00, $3A, $00, $50, $00, $57, $00, $63, $00, $6A, $00, $A2, $00, $AB, $00
+  Unknown33 $00,$00
+  Unknown3A $00,$00
+  Unknown50 $00,$00
+  Unknown57 $00,$00
+  Unknown63 $00,$00
+  Unknown6A $00,$00
+  Unknown22 $01,$00
+  Unknown2B $01,$00
+
 ScriptSetCode0DEnd::
 
 ScriptSetResource0D::

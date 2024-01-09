@@ -7,7 +7,25 @@ ScriptSet61::
   dbw $03, ScriptSetResource61 - ScriptSet61
 
 ScriptSetCode61::
-  db $0F, $00, $12, $00, $19, $00, $1B, $00, $22, $00, $25, $00, $00, $87, $01, $84, $07, $00, $01, $38, $28, $81, $00, $80, $81, $01, $56, $50, $18, $01, $00, $00, $82, $56, $82, $00, $00
+  Unknown0F $00,$00,$12
+  Unknown00 $00,$19
+  Unknown00 $00,$1B
+  Unknown00 $00,$22
+  Unknown00 $00,$25
+  Unknown00 $00,$00
+  Unknown07 $01,$01
+  Unknown04 $01,$07
+  Unknown00 $00,$01
+  Unknown38 $00,$28
+  Unknown01 $01,$00
+  Unknown00 $01,$81
+  Unknown01 $00,$56
+  Unknown50 $00,$18
+  Unknown01 $00,$00
+  Unknown00 $00,$82
+  Unknown56 $00,$82
+  Unknown00 $00,$00
+
 ScriptSetCode61End::
 
 ScriptSetResource61::

@@ -7,7 +7,34 @@ ScriptSet2B::
   dbw $04, ScriptSetResource2B - ScriptSet2B
 
 ScriptSetCode2B::
-  db $13, $00, $16, $00, $1D, $00, $1F, $00, $26, $00, $2E, $00, $31, $00, $39, $00, $00, $87, $01, $84, $00, $03, $02, $60, $38, $81, $00, $80, $81, $01, $63, $48, $10, $01, $00, $00, $02, $63, $00, $01, $00, $1C, $00, $82, $00, $00, $00, $02, $63, $00, $01, $00, $1C, $80, $8C, $01
+  Unknown13 $00,$00
+  Unknown16 $00,$00
+  Unknown1D $00,$00
+  Unknown1F $00,$00
+  Unknown26 $00,$00
+  Unknown2E $00,$00
+  Unknown31 $00,$00
+  Unknown39 $00,$00
+  Unknown00 $00,$87
+  Unknown01 $00,$84
+  Unknown00 $00,$03
+  LoadSceneText $00,$60,$38
+  Unknown01 $01,$00
+  Unknown00 $01,$81
+  Unknown01 $00,$63
+  Unknown48 $00,$10
+  Unknown01 $00,$00
+  Unknown00 $00,$02
+  Unknown63 $00,$00
+  Unknown01 $00,$00
+  Unknown1C $00,$00
+  LoadSceneText $01,$00,$00
+  Unknown00 $00,$02
+  Unknown63 $00,$00
+  Unknown01 $00,$00
+  Unknown1C $00,$80
+  Unknown0C $01,$01
+
 ScriptSetCode2BEnd::
 
 ScriptSetResource2B::

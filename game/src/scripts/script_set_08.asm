@@ -7,7 +7,17 @@ ScriptSet08::
   dbw $02, ScriptSetResource08 - ScriptSet08
 
 ScriptSetCode08::
-  db $0B, $00, $0E, $00, $15, $00, $19, $00, $00, $87, $00, $84, $07, $00, $06, $48, $70, $80, $00, $84, $8C, $02, $82, $00, $00
+  Unknown0B $00,$00,$0E,$00
+  Unknown15 $00,$00
+  Unknown19 $00,$00
+  Unknown00 $00,$87
+  Unknown00 $00,$84
+  Unknown07 $00,$00
+  CharacterMove $00,$48,$70,$80
+  Unknown00 $00,$84
+  Unknown0C $01,$02
+  LoadSceneText $01,$00,$00
+
 ScriptSetCode08End::
 
 ScriptSetResource08::

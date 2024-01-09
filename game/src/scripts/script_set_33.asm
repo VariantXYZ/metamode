@@ -7,7 +7,92 @@ ScriptSet33::
   dbw $0B, ScriptSetResource33 - ScriptSet33
 
 ScriptSetCode33::
-  db $2F, $00, $36, $00, $47, $00, $4D, $00, $50, $00, $58, $00, $5B, $00, $66, $00, $69, $00, $71, $00, $74, $00, $7C, $00, $7F, $00, $8A, $00, $8D, $00, $95, $00, $98, $00, $A3, $00, $A6, $00, $AE, $00, $B7, $00, $BF, $00, $00, $00, $00, $01, $00, $11, $80, $81, $03, $06, $30, $10, $03, $02, $15, $60, $38, $03, $00, $0B, $80, $38, $02, $00, $00, $84, $0E, $01, $90, $01, $83, $00, $00, $00, $02, $06, $00, $01, $00, $12, $00, $82, $00, $00, $00, $02, $06, $00, $02, $00, $12, $80, $01, $3D, $00, $82, $00, $02, $00, $02, $06, $00, $01, $00, $3D, $80, $82, $00, $06, $00, $02, $0B, $00, $01, $00, $12, $00, $82, $00, $01, $00, $02, $0B, $00, $02, $00, $12, $80, $01, $3D, $00, $82, $00, $03, $00, $02, $0B, $00, $01, $00, $3D, $80, $82, $00, $07, $00, $02, $15, $00, $02, $00, $12, $80, $01, $3D, $00, $82, $00, $04, $00, $02, $15, $00, $01, $00, $12, $00, $02, $00, $05, $15, $05, $80, $8F, $12, $00, $00, $02, $15, $00, $01, $01, $3D, $80, $82, $00, $08
+  Unknown2F $00,$00
+  Unknown36 $00,$00
+  Unknown47 $00,$00
+  Unknown4D $00,$00
+  Unknown50 $00,$00
+  Unknown58 $00,$00
+  Unknown5B $00,$00
+  Unknown66 $00,$00
+  Unknown69 $00,$00
+  Unknown71 $00,$00
+  Unknown74 $00,$00
+  Unknown7C $00,$00
+  Unknown7F $00,$00
+  Unknown0A $01,$00
+  Unknown0D $01,$00
+  Unknown15 $01,$00
+  Unknown18 $01,$00
+  Unknown23 $01,$00
+  Unknown26 $01,$00
+  Unknown2E $01,$00
+  Unknown37 $01,$00
+  Unknown3F $01,$00
+  Unknown00 $00,$00
+  Unknown00 $00,$01
+  Unknown00 $00,$11
+  Unknown00 $01,$81
+  Unknown03 $00,$06
+  Unknown30 $00,$10
+  Unknown03 $00,$02
+  Unknown15 $00,$60
+  Unknown38 $00,$03
+  Unknown00 $00,$0B
+  Unknown00 $01,$38
+  LoadSceneText $00,$00,$00
+  Unknown04 $01,$0E
+  Unknown01 $00,$90
+  Unknown01 $00,$83
+  Unknown00 $00,$00
+  Unknown00 $00,$02
+  CharacterMove $00,$00,$01,$00
+  Unknown12 $00,$00
+  LoadSceneText $01,$00,$00
+  Unknown00 $00,$02
+  CharacterMove $00,$00,$02,$00
+  Unknown12 $00,$80
+  Unknown01 $00,$3D
+  Unknown00 $00,$82
+  Unknown00 $00,$02
+  Unknown00 $00,$02
+  CharacterMove $00,$00,$01,$00
+  Unknown3D $00,$80
+  LoadSceneText $01,$00,$06
+  Unknown00 $00,$02
+  Unknown0B $00,$00,$01,$00
+  Unknown12 $00,$00
+  LoadSceneText $01,$00,$01
+  Unknown00 $00,$02
+  Unknown0B $00,$00,$02,$00
+  Unknown12 $00,$80
+  Unknown01 $00,$3D
+  Unknown00 $00,$82
+  Unknown00 $00,$03
+  Unknown00 $00,$02
+  Unknown0B $00,$00,$01,$00
+  Unknown3D $00,$80
+  LoadSceneText $01,$00,$07
+  Unknown00 $00,$02
+  Unknown15 $00,$00
+  LoadSceneText $00,$00,$12
+  Unknown00 $01,$01
+  Unknown3D $00,$00
+  LoadSceneText $01,$00,$04
+  Unknown00 $00,$02
+  Unknown15 $00,$00
+  Unknown01 $00,$00
+  Unknown12 $00,$00
+  LoadSceneText $00,$00,$05
+  Unknown15 $00,$05
+  Unknown00 $01,$8F
+  Unknown12 $00,$00
+  Unknown00 $00,$02
+  Unknown15 $00,$00
+  Unknown01 $00,$01
+  Unknown3D $00,$80
+  LoadSceneText $01,$00,$08
+
 ScriptSetCode33End::
 
 ScriptSetResource33::

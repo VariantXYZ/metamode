@@ -7,7 +7,49 @@ ScriptSet4B::
   dbw $06, ScriptSetResource4B - ScriptSet4B
 
 ScriptSetCode4B::
-  db $1B, $00, $1E, $00, $25, $00, $27, $00, $33, $00, $3C, $00, $3F, $00, $48, $00, $4E, $00, $51, $00, $54, $00, $57, $00, $00, $87, $01, $84, $05, $05, $03, $80, $40, $81, $00, $80, $81, $02, $5B, $70, $28, $01, $02, $29, $80, $38, $02, $02, $00, $04, $8E, $01, $00, $01, $00, $73, $80, $83, $00, $00, $00, $04, $8E, $01, $00, $01, $00, $73, $00, $23, $51, $00, $8F, $73, $00, $00, $82, $29, $82, $00, $00, $00, $82, $5B, $82, $00, $01
+  Unknown1B $00,$00
+  Unknown1E $00,$00
+  Unknown25 $00,$00
+  Unknown27 $00,$00
+  Unknown33 $00,$00
+  Unknown3C $00,$00
+  Unknown3F $00,$00
+  Unknown48 $00,$00
+  Unknown4E $00,$00
+  Unknown51 $00,$00
+  Unknown54 $00,$00
+  Unknown57 $00,$00
+  Unknown00 $00,$87
+  Unknown01 $00,$84
+  Unknown05 $00,$05
+  Unknown03 $00,$80
+  Unknown40 $00,$81
+  Unknown00 $00,$80
+  Unknown01 $01,$02
+  Unknown5B $00,$70
+  Unknown28 $00,$01
+  LoadSceneText $00,$29,$80
+  Unknown38 $00,$02
+  LoadSceneText $00,$00,$04
+  Unknown0E $01,$01
+  Unknown00 $00,$01
+  Unknown00 $00,$73
+  Unknown00 $01,$83
+  Unknown00 $00,$00
+  Unknown00 $00,$04
+  Unknown0E $01,$01
+  Unknown00 $00,$01
+  Unknown00 $00,$73
+  Unknown00 $00,$23
+  Unknown51 $00,$00
+  Unknown0F $01,$73,$00
+  Unknown00 $00,$82
+  Unknown29 $00,$82
+  Unknown00 $00,$00
+  Unknown00 $00,$82
+  Unknown5B $00,$82
+  Unknown00 $00,$01
+
 ScriptSetCode4BEnd::
 
 ScriptSetResource4B::
